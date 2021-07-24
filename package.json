@@ -20,7 +20,8 @@
     "@grouparoo/snowflake": "0.5.1",
     "@grouparoo/ui-community": "0.5.1",
     "@grouparoo/zendesk": "0.5.1",
-    "grouparoo": "^0.5.1"
+    "grouparoo": "^0.5.1", 
+    "@grouparoo/ui-config": "0.5.1"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start",
