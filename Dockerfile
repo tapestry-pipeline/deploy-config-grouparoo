@@ -17,7 +17,7 @@ ENV S3_BUCKET=""
 
 COPY . .
 RUN npm install
-RUN npm prune
+# RUN npm prune
 
 WORKDIR /grouparoo/node_modules/@grouparoo/core
 CMD ["./bin/start"]
