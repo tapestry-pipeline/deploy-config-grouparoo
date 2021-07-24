@@ -19,7 +19,7 @@ COPY . .
 RUN npm install
 # RUN npm prune
 
-WORKDIR /node_modules/@grouparoo/core
+WORKDIR /grouparoo/node_modules/@grouparoo/core
 CMD ["./bin/start"]
 
 EXPOSE $PORT/tcp
