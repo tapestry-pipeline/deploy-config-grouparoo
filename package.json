@@ -1,24 +1,48 @@
 {
-  "author": "Your Name <email@example.com>",
-  "name": "deploy-config-grouparoo",
-  "description": "A Grouparoo Deployment",
+  "author": "Grouparoo Inc <hello@grouparoo.com>",
+  "name": "@grouparoo/app-example-docker",
+  "description": "An example Grouparoo Deployment",
   "version": "0.0.1",
   "license": "MPL-2.0",
   "private": true,
-  "engines": {
-    "node": ">=12.0.0 <16.0.0"
-  },
   "dependencies": {
+    "@grouparoo/bigquery": "0.5.1",
     "@grouparoo/core": "0.5.1",
-    "@grouparoo/ui-community": "0.5.1"
-  },
-  "devDependencies": {
-    "@grouparoo/ui-config": "0.5.1"
+    "@grouparoo/csv": "0.5.1",
+    "@grouparoo/files-s3": "0.5.1",
+    "@grouparoo/google-sheets": "0.5.1",
+    "@grouparoo/hubspot": "0.5.1",
+    "@grouparoo/logger": "0.5.1",
+    "@grouparoo/mailchimp": "0.5.1",
+    "@grouparoo/mysql": "0.5.1",
+    "@grouparoo/postgres": "0.5.1",
+    "@grouparoo/salesforce": "0.5.1",
+    "@grouparoo/snowflake": "0.5.1",
+    "@grouparoo/ui-community": "0.5.1",
+    "@grouparoo/zendesk": "0.5.1"
   },
   "scripts": {
-    "start": "cd node_modules/@grouparoo/core && ./bin/start"
+    "start": "cd node_modules/@grouparoo/core && ./bin/start",
+    "test": "./__tests__/integration"
   },
   "grouparoo": {
-    "plugins": []
+    "plugins": [
+      "@grouparoo/bigquery",
+      "@grouparoo/csv",
+      "@grouparoo/files-s3",
+      "@grouparoo/google-sheets",
+      "@grouparoo/hubspot",
+      "@grouparoo/logger",
+      "@grouparoo/mailchimp",
+      "@grouparoo/mysql",
+      "@grouparoo/postgres",
+      "@grouparoo/salesforce",
+      "@grouparoo/snowflake",
+      "@grouparoo/ui-community",
+      "@grouparoo/zendesk"
+    ],
+    "includedFiles": [
+      "assets"
+    ]
   }
 }
