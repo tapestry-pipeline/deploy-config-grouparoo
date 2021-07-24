@@ -19,6 +19,7 @@
     "@grouparoo/salesforce": "0.5.1",
     "@grouparoo/snowflake": "0.5.1",
     "@grouparoo/ui-community": "0.5.1",
+    "@grouparoo/ui-config": "0.5.1",
     "@grouparoo/zendesk": "0.5.1",
     "grouparoo": "^0.5.1"
   },
