@@ -1,8 +1,10 @@
 exports.default = async function buildConfig() {
-  const account = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-hostname" --with-decryption').toString()).Parameter.Value;
-  const username = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-username" --with-decryption').toString()).Parameter.Value;
-  const password = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-pass" --with-decryption').toString()).Parameter.Value;
-  
+  // const account = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-hostname" --with-decryption').toString()).Parameter.Value;
+  // const username = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-username" --with-decryption').toString()).Parameter.Value;
+  // const password = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-pass" --with-decryption').toString()).Parameter.Value;
+
+  // dla27293.us-east-1
+  const account = process.env.SNOW_HOSTNAME
   return [
     {
       class: "App",
@@ -11,8 +13,8 @@ exports.default = async function buildConfig() {
       type: "snowflake",
       options: {
         account: account,
-        username: username, // Snowflake user login name to connect with
-        password: password, // Password for the given username
+        username: "fantasticfour", // Snowflake user login name to connect with
+        password: "Fantastic1258$", // Password for the given username
         warehouse: "TAPESTRY_WAREHOUSE", // The Snowflake warehouse to use - e.g. `warehouse: "COMPUTE_WH"`
         database: "TAPESTRY_DATABASE", // The Snowflake database to use
         schema: "TAPESTRY_SCHEMA", // The Snowflake schema (default: PUBLIC)
