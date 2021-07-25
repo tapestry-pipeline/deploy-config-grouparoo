@@ -9,9 +9,9 @@ exports.default = async function buildConfig() {
         account: SNOWFLAKE_ACCOUNT_HOST,
         username: SNOWFLAKE_USERNAME, // Snowflake user login name to connect with
         password: SNOWFLAKE_PASSWORD, // Password for the given username
-        warehouse: "TAPESTRY", // The Snowflake warehouse to use - e.g. `warehouse: "COMPUTE_WH"`
-        database: "SF_TUTS", // The Snowflake database to use
-        schema: "PUBLIC", // The Snowflake schema (default: PUBLIC)
+        warehouse: "TAPESTRY_WAREHOUSE", // The Snowflake warehouse to use - e.g. `warehouse: "COMPUTE_WH"`
+        database: "TAPESTRY_DATABASE", // The Snowflake database to use
+        schema: "TAPESTRY_SCHEMA", // The Snowflake schema (default: PUBLIC)
       },
     },
   ];
