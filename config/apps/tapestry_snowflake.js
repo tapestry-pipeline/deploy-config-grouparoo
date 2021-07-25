@@ -15,7 +15,7 @@ exports.default = async function buildConfig() {
       },
     },
   ];
-
+}
 
 // {
 //   "class": "App",
