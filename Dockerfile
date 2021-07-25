@@ -1,8 +1,8 @@
-FROM docker.io/binxio/ssm-get-parameter:0.2.3 AS ssm
+# FROM docker.io/binxio/ssm-get-parameter:0.2.3 AS ssm
 
-FROM alpine
-COPY --from=ssm /ssm-get-parameter  /usr/local/bin
-ENTRYPOINT [ "/usr/local/bin/entrypoint" ]
+# FROM alpine
+# COPY --from=ssm /ssm-get-parameter  /usr/local/bin
+# ENTRYPOINT [ "/usr/local/bin/entrypoint" ]
 
 FROM node:14
 
@@ -20,9 +20,9 @@ ENV S3_ACCESS_KEY=""
 ENV S3_SECRET_ACCESS_KEY=""
 ENV S3_REGION=""
 ENV S3_BUCKET=""
-ENV SNOWFLAKE_ACCOUNT_HOST=ssm:///snowflake/acct-hostname
-ENV SNOWFLAKE_USERNAME=ssm:///snowflake/acct-username
-ENV SNOWFLAKE_PASSWORD=ssm:///snowflake/acct-pass
+# ENV SNOWFLAKE_ACCOUNT_HOST=ssm:///snowflake/acct-hostname
+# ENV SNOWFLAKE_USERNAME=ssm:///snowflake/acct-username
+# ENV SNOWFLAKE_PASSWORD=ssm:///snowflake/acct-pass
 
 # snowflake account host /snowflake/acct-hostname
 # snowflake username /snowflake/acct-username
