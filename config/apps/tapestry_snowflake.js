@@ -1,8 +1,14 @@
 exports.default = async function buildConfig() {
-  const account = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-hostname" --with-decryption').toString()).Parameter.Value;
-  const username = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-username" --with-decryption').toString()).Parameter.Value;
-  const password = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-pass" --with-decryption').toString()).Parameter.Value;
-  
+  // const account = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-hostname" --with-decryption').toString()).Parameter.Value;
+  // const username = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-username" --with-decryption').toString()).Parameter.Value;
+  // const password = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-pass" --with-decryption').toString()).Parameter.Value;
+
+  // dla27293.us-east-1
+  // "fantasticfour"
+  // "Fantastic1258$"
+  const account = process.env.SNOW_HOSTNAME
+  const username = process.env.SNOW_ACCOUNT_USERNAME
+  const password = process.env.SNOW_ACCOUNT_PASSWORD
   return [
     {
       class: "App",
@@ -20,18 +26,3 @@ exports.default = async function buildConfig() {
     },
   ];
 }
-
-// {
-//   "class": "App",
-//   "id": "tapestry_snowflake",
-//   "name": "Tapestry Snowflake",
-//   "type": "snowflake",
-//   "options": {
-//     "schema": "TAPESTRY_SCHEMA",
-//     "account": "dla27293.us-east-1",
-//     "database": "TAPESTRY_DATABASE",
-//     "password": "Fantastic1258$",
-//     "username": "fantasticfour",
-//     "warehouse": "TAPESTRY_WAREHOUSE"
-//   }
-// }
