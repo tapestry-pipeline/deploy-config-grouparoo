@@ -1,11 +1,4 @@
 exports.default = async function buildConfig() {
-  // const account = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-hostname" --with-decryption').toString()).Parameter.Value;
-  // const username = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-username" --with-decryption').toString()).Parameter.Value;
-  // const password = JSON.parse(execSync('aws ssm get-parameter --name "/snowflake/acct-pass" --with-decryption').toString()).Parameter.Value;
-
-  // dla27293.us-east-1
-  // "fantasticfour"
-  // "Fantastic1258$"
   const account = process.env.SNOW_HOSTNAME
   const username = process.env.SNOW_ACCOUNT_USERNAME
   const password = process.env.SNOW_ACCOUNT_PASSWORD
