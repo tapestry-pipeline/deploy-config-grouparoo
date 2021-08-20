@@ -21,5 +21,6 @@ This respository is cloned into your local project folder during the `tapestry d
 
 ### Resources:
 - Learn more about Grouparoo [in the docs](https://www.grouparoo.com/docs)
+- Read our [Case Study](https://tapestry-pipeline.github.io/) about Tapestry
 
 
