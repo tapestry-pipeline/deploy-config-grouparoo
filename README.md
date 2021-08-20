@@ -19,6 +19,7 @@ This respository is cloned into your local project folder during the `tapestry d
 [tapestry-cli]: https://github.com/tapestry-pipeline/tapestry-cli
 [tapestry-dashboard]: https://github.com/tapestry-pipeline/tapestry-dashboard
 
-
+### Resources:
+- Learn more about Grouparoo [in the docs](https://www.grouparoo.com/docs)
 
 
