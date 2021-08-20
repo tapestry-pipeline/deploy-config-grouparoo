@@ -9,7 +9,7 @@ Tapestry is an open source orchestration framework for the deployment of user en
 
 ## Usage
 
-This respository is cloned into your local project folder during the 'tapestry deploy' command. This respository supplies the necessary Grouparoo configuration files to build a basic Grouparoo image. 
+This respository is cloned into your local project folder during the `tapestry deploy` command. This respository supplies the necessary Grouparoo configuration files to build a basic Grouparoo image. 
 
 
 
